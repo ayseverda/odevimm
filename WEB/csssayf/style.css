@@ -8,7 +8,6 @@
 
 
 
-
 header {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     display: flex;
@@ -39,3 +38,22 @@ nav ul li a:hover {
     background-color: rgba(99, 71, 146, 0.253);
 }
 
+
+.fab {
+    padding: 8px;
+    font-size: 30px;
+    width: 32px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
