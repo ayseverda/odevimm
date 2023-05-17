@@ -6,7 +6,7 @@ body{
     justify-content: center;
     align-items:center;
     height: 100vh;
-    background: rgb(99, 71, 146);
+    background: url(/foto/loginark.jpg);
     font-family: 'Poppins',sans-serif;
 }
 
@@ -59,12 +59,12 @@ body{
             font-size: 12px;
             padding:2px 4px;
             border:1px solid #000;
-            background: rgb(99, 71, 146);
+            background: rgb(56, 161, 160);
         }
 
         .giris .pc input[type="submit"]
         {
-    background: rgb(99, 71, 146);
+    background: rgb(56, 161, 160);
     border:none;
     box-shadow: none;
     text-transform: uppercase;
@@ -73,7 +73,7 @@ body{
         }
 
     .giris .pc input[type="submit"]:hover {
-        background: rgb(99, 71, 146);
+        background: rgb(71, 146, 102);
     }
 
     .giris a{
