@@ -30,11 +30,11 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: rgba(97, 94, 94, 0.537);;
+    background-color: rgba(99, 71, 146, 0.253);
 }
 
 .hero {
-    background-color: rgba(118, 117, 117, 0.471);
+    background-color: rgba(99, 71, 146, 0.155);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -51,7 +51,7 @@ nav ul li a:hover {
 }
 
 .hero p {
-    max-width: 23em;
+    max-width: 230em;
 }
 
 .hero p span {

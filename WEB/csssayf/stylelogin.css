@@ -2,11 +2,11 @@
 body{
     margin:0;
     padding:0;
-    display:flex;
+    
     justify-content: center;
     align-items:center;
     height: 100vh;
-    background: rgb(54, 123, 79);
+    background: rgb(99, 71, 146);
     font-family: 'Poppins',sans-serif;
 }
 
@@ -59,12 +59,12 @@ body{
             font-size: 12px;
             padding:2px 4px;
             border:1px solid #000;
-            background: rgb(54, 123, 79);
+            background: rgb(99, 71, 146);
         }
 
         .giris .pc input[type="submit"]
         {
-    background: rgb(54, 123, 79);
+    background: rgb(99, 71, 146);
     border:none;
     box-shadow: none;
     text-transform: uppercase;
@@ -73,7 +73,7 @@ body{
         }
 
     .giris .pc input[type="submit"]:hover {
-        background: rgb(54, 123, 79);
+        background: rgb(99, 71, 146);
     }
 
     .giris a{
