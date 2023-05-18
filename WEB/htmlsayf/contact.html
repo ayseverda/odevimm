@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/csssayf/stylecontact.css">
     <link rel="stylesheet" href="/csssayf/style.css">
+
 <style>    
    
 
@@ -42,26 +44,10 @@
             <li>
                 <a href="/htmlsayf/contact.html">İletişim</a>
             </li>
-            <li>
-                <a href="/htmlsayf/login.html">giriş yap</a>
-            </li>
+            
         </ul> 
     </nav>
 </header>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <center>
     <div  class="ozellikk">
@@ -80,41 +66,46 @@
                                 <input type="email" placeholder="email" required>
                             </div>
                             <div class="secenek"><select class="form-control form-control-sm">
-                                <option>belirtmek istemiyorum</option>
+                                <option>cinsiyet</option>
                                 <option>kadın</option>
                                 <option>erkek</option>
+                                <option>belirtmek istemiyorum</option>
                               </select>
                             </div>
                             
-         <form>
+         <form action="" id="form1">
            <div class="form-row align-items-center">
              <div class="col-auto my-1">
                <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect"></label>
                   <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                     <option selected>YAŞINIZ</option>
+                
+                    <option selected>yaş</option>
                          <option value="1">18 yaşının altındayım</option>
                              <option value="2">18-35</option>
                                  <option value="3">35-55</option>
                                    <option value="4">55+</option>
+                                   
                                 </select>
                               </div>
                                </div>
                                 </div>
-                              </form>
+                             
                           </div>
                         <div class="field">
-                            <input type="text" placeholder="BAŞLIK" required>
+                            <input type="text"  placeholder="BAŞLIK" required>
                         </div>
                         <div class="field textarea"></div>
-                        <textarea name="message" cols="30" rows="10" placeholder="Mesajınız..."></textarea>
+                        <textarea name="message"  cols="30" rows="10" placeholder="Mesajınız..."></textarea>
                 </div>
-                <div class="button-area">
-                    <input type="submit" class="btn" value="iletişime geç">
-                    <br>
-                <input type="reset" class="btn" valuse="temizle">
+              
+<input class="btn btn-primary" type="submit" value="gonder">
+<input class="btn btn-primary" type="reset" value="sil">
+</form>
                 </div>
-                
                 </form>
+                <script>
+                   
+                </script>
             </div>
         </div>
         </div>
@@ -123,3 +114,72 @@
 </body>
 </center>
 </html>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // İletişime Geç butonunu seçme
+        var submitButton = document.querySelector(".button-area .btn");
+        // Temizle butonunu seçme
+        var resetButton = document.querySelector(".button-area input[type='reset']");
+
+        // İletişime Geç butonuna tıklama olayını dinleme
+        submitButton.addEventListener("click", function(event) {
+            event.preventDefault(); // Butonun varsayılan davranışını engelleme
+
+            // Form girdilerini almak için gereken kodları buraya ekleyin
+            var name = document.querySelector(".field.name input").value;
+            var email = document.querySelector(".field.email input").value;
+            var gender = document.querySelector(".secenek select").value;
+            var age = document.querySelector("#inlineFormCustomSelect").value;
+            var subject = document.querySelector(".field input").value;
+            var message = document.querySelector(".field.textarea textarea").value;
+
+            // Form verilerini kontrol etme
+            if (name.trim() === "") {
+                alert("Lütfen isim/soyisim giriniz.");
+                return;
+            }
+
+            if (email.trim() === "") {
+                alert("Lütfen email adresinizi giriniz.");
+                return;
+            }
+
+            if (gender === "cinsiyet") {
+                alert("Lütfen cinsiyet seçiniz.");
+                return;
+            }
+
+            if (age === "yaş") {
+                alert("Lütfen yaşınızı seçiniz.");
+                return;
+            }
+
+            if (subject.trim() === "") {
+                alert("Lütfen başlık giriniz.");
+                return;
+            }
+
+            if (message.trim() === "") {
+                alert("Lütfen mesajınızı giriniz.");
+                return;
+            }
+
+            // Form verilerini işleme veya sunucuya gönderme
+            // Burada istediğiniz işlemleri yapabilirsiniz
+
+            // Formu sıfırlama
+            document.getElementById("form1").reset();
+        });
+
+        // Temizle butonuna tıklama olayını dinleme
+        resetButton.addEventListener("click", function(event) {
+            event.preventDefault(); // Butonun varsayılan davranışını engelleme
+
+            // Formu sıfırlama
+            document.getElementById("form1").reset();
+        });
+    });
+</script>
+

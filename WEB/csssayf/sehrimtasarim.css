@@ -1,13 +1,15 @@
 .gezilecekyerler{
     background: rgba(255, 255, 255, 0.745);
-    margin: 50px;
+    margin-left: 1px;
+    margin-right: 1px;
     
 }
 
 .tanitim{
     background: rgba(255, 255, 255, 0.732);
+    
 }
 
 body{
-    background: rgb(117, 196, 117);
+    background:url(/foto/sehirarkaa.jpg);
 }

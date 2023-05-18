@@ -1,3 +1,5 @@
+
+
 * {
     margin: 0;
     padding: 0;
@@ -19,7 +21,7 @@ ozellikk{
 
 
 section {
-    padding: 100px 0;
+    padding: 1px 0;
     
    
 }
@@ -34,9 +36,9 @@ section {
 section .title {
     position: relative;
     text-align: center;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 500;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
     padding-bottom: 20px;
     }
 
@@ -55,7 +57,7 @@ section .title::after {
     position: absolute;
     bottom: -8px;
     left: 50%;
-    font-size: 20%;
+    font-size: 50%;
     color: rgb(8, 67, 28);
     padding: 0 5px;
     background: #fff;
