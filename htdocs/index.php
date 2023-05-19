@@ -1,7 +1,7 @@
 <?php
 ob_start();
  
-$user = 'ayse';
+$user = 'ayse@a';
 $pass = '123';
 
 if(isset($_POST['username']) && isset($_POST['password'])){
@@ -9,10 +9,18 @@ if(isset($_POST['username']) && isset($_POST['password'])){
     $password = $_POST['password'];
     
     if($username == $user && $password == $pass) {
-        header('Location:../htmlsayf/index.html');
+       // header('Location:../htmlsayf/index.html');
+        echo "<script>
+		alert('basariyla giris yapildi,hosgeldiniz');
+		window.location.href='/htmlsayf/index.html';
+	</script>";
+
         exit;
     } else {
-        echo "Kullanıcı adı veya şifre hatalı";
+        echo "<script>
+		alert('hatali giris');
+		window.location.href='index.php';
+	</script>";
     }
 }
 
@@ -210,7 +218,7 @@ body{
                     <a href="/htmlsayf/sehrim.html">Ankara</a>
                 </li>
                 <li>
-                    <a href="../htmlsayf/contact.php">İletişim</a>
+                    <a href="/htmlsayf/contact.php">İletişim</a>
                 </li>
                 <li>
                     <a href="/htmlsayf/login.html">Giriş Yap</a>
@@ -224,7 +232,7 @@ body{
             <h2>GİRİŞ YAP</h2>
             <form method="POST" action="">
                 <div class="pc">
-                    <input type="text" required="" name="username">
+                    <input type="email" required="" name="username">
                     <span>Kullanıcı Adı</span>
                 </div>
                 <div class="pc">

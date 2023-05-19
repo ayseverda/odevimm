@@ -1,4 +1,9 @@
+<?php
 
+include ("../baglanti.php");
+
+// print_r($_POST);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -42,7 +47,10 @@
                 <a href="/htmlsayf/sehrim.html">Ankara</a>
             </li>
             <li>
-                <a href="/htmlsayf/contact.html">İletişim</a>
+                <a href="/htmlsayf/contact.php">İletişim</a>
+            </li>
+            <li>
+                <a href="/htmlsayf/contactveri.php">eski mesajlari görüntüle</a>
             </li>
             
         </ul> 
@@ -73,7 +81,7 @@
                             <input type="text"  placeholder="BAŞLIK" name="konu" required>
                         </div>
                         <div class="field textarea"></div>
-                        <textarea name="message"  cols="30" rows="10" name="mesaj" placeholder="Mesajınız..."></textarea>
+                        <textarea cols="30" rows="10" name="mesaj" placeholder="Mesajınız..."></textarea>
                 </div>
               
 <input class="btn btn-primary" type="submit" value="gonder"> 
@@ -81,7 +89,6 @@
 
 </form>
                 </div>
-                </form>
                 <script>
                    
                 </script>
@@ -164,10 +171,8 @@
 
 <?php
 
- include ("baglanti.php");
 
-if(isset($_POST["isim"],$_POST["email"], $_POST["number"],
-$_POST["konu"],$_POST["mesaj"]))
+if($_POST)
 {
     $adsoyad=$_POST["isim"];
     $email=$_POST["email"];
@@ -175,11 +180,10 @@ $_POST["konu"],$_POST["mesaj"]))
     $konu=$_POST["konu"];
     $mesaj=$_POST["mesaj"];
 
-    $ekle="INSERT INTO iletisim(adsoyad
-    ,email, konu, mesaj) VALUES ('".$adsoyad."','".$email."','".$telefon."',
-    '".$konu."','".$mesaj."')";
+    $ekle = "INSERT INTO `iletisim`(`adsoyad`, `email`, `telefon`, `konu`, `mesaj`) VALUES ('{$adsoyad}','{$email}','{$telefon}','{$konu}','{$mesaj}')";
+    
 
-    if($baglan->query($ekle)===TRUE)
+    if(mysqli_query($baglan,$ekle))
     {
         echo "<script>alert('mesaj gönderildi')</script>";
     }

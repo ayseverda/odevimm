@@ -28,26 +28,54 @@
 </head>
 <body>
 
-<h1>A Fancy Table</h1>
+<h1>eski mesajlar</h1>
 
 <table id="customers">
   <tr>
     <th>Ad-Soyad</th>
     <th>email</th>
     <th>telefon</th>
-    <th>başlık</th>
+    <th>konu</th>
     <th>mesaj</th>
   </tr>
+  <?php 
+include("../baglanti.php");
 
-  <td>ayşe</td>
-  <td>rdgrdb@dfbhdf.com</td>
-  <td>0535435</td>
-  <td>super</td>
-  <td>harika</td>
+$sec="Select * From iletisim";
+$sonuc=$baglan->query($sec);
+
+if($sonuc->num_rows>0)
+{
+  while($cek=$sonuc->fetch_assoc())
+  {
+    echo "
+    
+    <tr>
+    <td> ".$cek['adsoyad']." </td>
+    <td> ".$cek['email']." </td>
+    <td> ".$cek['telefon']." </td>
+    <td>".$cek['konu']."</td>
+    <td>".$cek['mesaj']."</td> 
+    </tr>
+    ";
+  }
+}
+
+else{
+  echo "kayıtlı hiç bir veri bulunamadı";
+}
+
+?>
+
+
+
+
  
 </table>
 
 </body>
 </html>
+
+
 
 
