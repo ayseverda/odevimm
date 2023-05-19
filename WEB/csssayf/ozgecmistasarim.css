@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Pooins:wght@300;400;500;600;700;800&display=swap');
+:root{
+    --color1:#e77ecd;
+    --color2:#d377c9;
+    --color3: #335333;
+    --colorWhite: #fff
+
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body{
+    background: url(/foto/arkaplan2.jpg);
+    
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    position:relative;
+    width:100%;
+    max-width:1000px;
+    min-height: 1000px;
+    background: #fff;
+    margin:50px;
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0,0,0,.1);
+}
+
+.container .left_slide{
+position: relative;
+background: var(--color3);
+padding:40px;
+}
+
+.profil etext{
+        position: relative;
+        display:flex;
+        flex-direction: colum;
+        align-items:center;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(255,255,255,.2);
+}
+
+ .profiletext .imgbox{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+ }
+
+ .profiletext .imgbox img{
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover ;
+
+ }
+
+ .profiletext h2{
+    color: var(--colorWhite);
+    font-size:1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+ }
+.profiletext h2 span{
+    font-size: 8em;
+    font-weight: 300;
+}
+
+.contactinfo{
+    padding-top: 40px;
+}
+.title{
+    color:var(--colorWhite);
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.contactinfo ul{
+    position: relative;
+}
+.contactinfo ul li{
+    position: relative;
+    list-style: none;
+    margin:10px 0;
+    cursor:pointer;
+}
+
+.contactinfo ul li .icon{
+    display:inline-block;
+    width:30px;
+    font-size:18px;
+    color:#03a9f4;
+}
+.contactinfo ul li span{
+    color :var(--colorWhite);
+    font-weight: 300;
+}
+
+.contactinfo.education li{
+    margin-bottom: 15px;
+}
+
+.contactinfo.education h5{
+    color:#03a9f4;
+    font-weight: 500;
+}
+
+.contactinfo.education h4:nth-child(2){
+    color:var(--colorWhite);
+    font-weight: 500;
+}
+.contactinfo.education h4{
+    color:var(--colorWhite);
+    font-weight: 300;
+}
+
+.contactinfo.language .perecent{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background:#081921;
+    display: block;
+    margin-top:5px;
+}
+
+.contactinfo.language .perecent div{
+    position:absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    background: #03a9f4;}
+
+.about{
+    margin-bottom: 50px;
+
+}
+.about:last-child{
+    margin-bottom: 0;
+}
+
+.title2{
+    color: #003147;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+
+}
+p{
+    color:#333;
+}
+
+.about .box{
+    display: flex;
+    flex-direction: row;
+    margin:20px 0;
+}
+
+.about .box .year_company{
+    min-width: 150px;
+}
+
+.about .box .year_company h5{
+    text-transform: uppercase;
+    color:#848c90;
+    font-weight: 600;
+}
+
+.about .box .year_company h3{
+    text-transform: uppercase;
+    color:#2a7da2;
+    font-size: 16px;
+}
+
+.about .box .text h3{
+    text-transform: uppercase;
+    color:#2a7da2;
+    font-size:16px;
+}
+
+
+.container .right_slide{
+    position:relative;
+    background: var(--colorWhite);
+    padding:40px;
+    }
