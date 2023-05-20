@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>İzlediklerim</title>
+  <style>
+    .film {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: rgba(240, 248, 255, 0.471);
+    }
+
+    .film img {
+      max-width: 200px;
+      height: auto;
+    }
+
+    .film h2 {
+      margin-top: 0;
+
+    }
+
+    .film p {
+      margin: 5px 0;
+      font-size: 20px;
+    
+    }
+
+    body{
+        background: url(/foto/arkaplan.jpg);
+    }
+
+    .divim
+    {
+        background-color: rgba(240, 248, 255, 0.8);
+    }
+
+   
+  </style>
+  <link rel="stylesheet" href="/csssayf/style.css">
+</head>
+<body>
+    <header>
+        <h1 style="color:white;">Tekrar Tekrar İzlediklerim</h1>
+        <nav>
+          <ul>
+             
+              <li>
+                  <a href="/htmlsayf/ozgecmis.html">Özgeçmiş</a>
+              </li>
+             
+              <li>
+                  <a href="/htmlsayf/takimimiz.html">Ankaragücü</a>
+              </li>
+              <li>
+                  <a href="/htmlsayf/index.html">Hakkımda</a>
+              </li>
+              <li>
+                  <a href="/htmlsayf/sehrim.html">Ankara</a>
+              </li>
+              <li>
+                  <a href="/htmlsayf/contact.php">İletişim</a>
+              </li>
+              <li>
+                  <a href="/htmlsayf/ilgialan.html">İlgi Alanlarım</a>
+              </li>
+            
+          </ul> 
+      </nav>
+        </header>
+
+  
+  <div id="filmListesi"></div>
+
+  <script>
+    const apiKey = '3f4e6ea0'; 
+    const movieTitles = ['When Marnie Was There','Lemonade Mouth','The Wind Rises','Daria','After Life','Bojack Horseman',
+    ,'Coco','Eternal Sunshine of the Spotless Mind','My Neighbor Totoro','Fleabag','Ponyo','Modern Family', 'Spongebob']; 
+
+    const filmListesiDiv = document.getElementById('filmListesi');
+
+    movieTitles.forEach(movieTitle => {
+      const apiUrl = `http://www.omdbapi.com/?apikey=${apiKey}&t=${encodeURIComponent(movieTitle)}`;
+
+      fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+          // API yanıtını işleyin
+          const filmDiv = document.createElement('div');
+          filmDiv.className = 'film';
+          filmDiv.innerHTML = `
+            <h2>${data.Title}</h2>
+            <img src="${data.Poster}" alt="${data.Title} Poster">
+            <p>Yönetmen: ${data.Director}</p>
+            <p>Oyuncular: ${data.Actors}</p>
+            <p>Yıl: ${data.Year}</p>
+            <p>Tür: ${data.Genre}</p>
+            <p>Özet: ${data.Plot}</p>
+          `;
+          filmListesiDiv.appendChild(filmDiv);
+        })
+
+        .catch(error => {
+          // Hata durumunda işleme geçin
+          console.error('Hata:', error);
+        });
+    });
+  </script>
+</body>
+</html>
+

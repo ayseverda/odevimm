@@ -31,30 +31,33 @@ include ("../baglanti.php");
 <header>
     <h1 style="color:white;">İLETİŞİM</h1>
     <nav>
-        <ul>
-            
-            <li>
-                <a href="/htmlsayf/ozgecmis.html">Özgeçmiş</a>
-            </li>
-           
-            <li>
-                <a href="/htmlsayf/takimimiz.html">Ankaragücü</a>
-            </li>
-            <li>
-                <a href="/htmlsayf/index.html">Hakkımda</a>
-            </li>
-            <li>
-                <a href="/htmlsayf/sehrim.html">Ankara</a>
-            </li>
-            <li>
-                <a href="/htmlsayf/contact.php">İletişim</a>
-            </li>
-            <li>
-                <a href="/htmlsayf/contactveri.php">eski mesajlari görüntüle</a>
-            </li>
-            
-        </ul> 
-    </nav>
+            <ul>
+               
+                <li>
+                    <a href="/htmlsayf/ozgecmis.html">Özgeçmiş</a>
+                </li>
+               
+                <li>
+                    <a href="/htmlsayf/takimimiz.html">Ankaragücü</a>
+                </li>
+                <li>
+                    <a href="/htmlsayf/index.html">Hakkımda</a>
+                </li>
+                <li>
+                    <a href="/htmlsayf/sehrim.html">Ankara</a>
+                </li>
+                <li>
+                    <a href="../htmlsayf/contact.php">İletişim</a>
+                </li>
+                <li>
+                    <a href="/htmlsayf/ilgialan.html">İlgi Alanlarım</a>
+                </li>
+                <li>
+                    <a href="/htmlsayf/contactveri.php">Eski Mesajlar</a>
+                </li>
+              
+            </ul> 
+        </nav>
 </header>
 
 <center>

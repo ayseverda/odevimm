@@ -21,10 +21,7 @@ document.getElementById("contactForm").addEventListener("submit", function(event
       return;
     }
   
-    // ... Diğer kontrolleri buraya ekleyebilirsiniz ...
   
-    // Form verilerini işleme veya gönderme
-    // Örneğin, form verilerini konsola yazdıralım
     console.log("Name: " + name);
     console.log("Email: " + email);
     console.log("Age: " + age);

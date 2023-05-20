@@ -1,8 +1,8 @@
 <?php
 ob_start();
  
-$user = 'ayse@a';
-$pass = '123';
+$user = 'g221210038@sakarya.edu.tr';
+$pass = 'g221210038';
 
 if(isset($_POST['username']) && isset($_POST['password'])){
     $username = $_POST['username'];
@@ -29,7 +29,6 @@ include("baglanti.php");
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -46,6 +45,7 @@ include("baglanti.php");
     padding: 0;
     font-family: 'Poppins', sans-serif;
     
+    
 }
 
 
@@ -56,7 +56,7 @@ header {
     align-items: center;
     text-align: center;
     padding: 1rem;
-    
+   
     
 }
 
@@ -117,7 +117,7 @@ body{
     align-items:center;
     height: 100vh;
     font-family: 'Poppins',sans-serif;
-
+    background:url(/foto/arkaplan.jpg);
 }
 
 .giris{
@@ -169,12 +169,12 @@ body{
             font-size: 12px;
             padding:2px 4px;
             border:1px solid #000;
-            background: #335333;;
+            background: #335333;
         }
 
         .giris .pc input[type="submit"]
         {
-    background: #335333;;
+    background: #335333;
     border:none;
     box-shadow: none;
     text-transform: uppercase;
@@ -183,7 +183,7 @@ body{
         }
 
     .giris .pc input[type="submit"]:hover {
-        background: rgb(55, 160, 160);
+        background: darkgreen;
     }
 
     .giris a{
@@ -221,7 +221,7 @@ body{
                     <a href="/htmlsayf/contact.php">İletişim</a>
                 </li>
                 <li>
-                    <a href="/htmlsayf/login.html">Giriş Yap</a>
+                    <a href="/htmlsayf/ilgialan.html">İlgi Alanlarım</a>
                 </li>
             </ul> 
         </nav> 
