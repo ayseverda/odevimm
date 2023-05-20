@@ -24,11 +24,104 @@
   background-color: #04AA6D;
   color: white;
 }
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+header {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+nav ul li {
+    padding: 0.5rem;
+    
+    
+}
+
+nav ul li a {
+    
+    text-decoration: none;
+    background-color: #fff;
+    padding: 1rem;
+    
+    
+   
+}
+
+nav ul li a:hover {
+    background-color: rgba(99, 71, 146, 0.253);
+    
+    
+}
+
+
+.fab {
+    padding: 8px;
+    font-size: 30px;
+    width: 32px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+
 </style>
 </head>
 <body>
 
-<h1>eski mesajlar</h1>
+
+<header>
+        <h1>eski mesajlar</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/htmlsayf/ozgecmis.html">Özgeçmiş</a>
+                </li>
+                <li>
+                    <a href="/htmlsayf/takimimiz.html">Ankaragücü</a>
+                </li>
+                <li>
+                    <a href="/htmlsayf/index.html">Hakkımda</a>
+                </li>
+                <li>
+                    <a href="/htmlsayf/sehrim.html">Ankara</a>
+                </li>
+                <li>
+                    <a href="/htmlsayf/contact.php">İletişim</a>
+                </li>
+                <li>
+                    <a href="/htmlsayf/ilgialan.html">İlgi Alanlarım</a>
+                </li>
+            </ul> 
+        </nav> 
+    </header>
 
 <table id="customers">
   <tr>
