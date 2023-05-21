@@ -22,7 +22,18 @@ include ("../baglanti.php");
 
 <style>    
    
+  .form-group label {
+    color: white;
+  }
 
+  .cinsiyet label{
+    color:white;
+  }
+
+  .form-check-label
+  {
+    color:white;
+  }
 
 </style>
 </head>
@@ -79,7 +90,32 @@ include ("../baglanti.php");
                             <div class="field number">
                                 <input type="text" placeholder="telefon numarası" name="number" required>
                             </div>
+                            <div class="cinsiyet">
+                     <label for="validationDefault04">cinsiyet</label>
+                     <select class="custom-select" id="validationDefault04" required>
+                     <option selected disabled value="">Choose...</option>
+                     <option>kadın</option>
+                     <option>erkek</option>
+                     <option>belirtmek istemiyorum</option>
+      </select>
+    </div>
+                            <div class="form-group">
+                                <label for="formControlRange">sitemizi puanlayın </label>
+                             <input type="range" class="form-control-range" id="formControlRange" > 
+  </div>
                           </div>
+                          <div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+  <label class="form-check-label" for="defaultCheck1">
+    öğrenciyim
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+  <label class="form-check-label" for="defaultCheck1">
+    öğrenci degilim
+  </label>
+</div>
                         <div class="field">
                             <input type="text"  placeholder="BAŞLIK" name="konu" required>
                         </div>
